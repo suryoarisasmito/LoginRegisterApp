@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.loginappmvvm.ui.register.RegisterViewModel">
+
+    <data>
+        <variable
+            name="myRegisterViewModel"
+            type="com.example.loginappmvvm.ui.register.RegisterViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/img_register_1"
+            android:layout_width="wrap_content"
+            android:layout_height="186dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/shape_left_top"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/img_register_logo1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/registered1"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/txt_regsiter_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_register_logo1"
+            android:text="Welcome OnBoard!"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txt_regsiter_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_regsiter_1"
+            android:text="Let’s help you meet up your tasks."
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/linear_form_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/txt_regsiter_2"
+            android:padding="30dp">
+
+            <EditText
+                android:id="@+id/edt_fullName"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:paddingLeft="16dp"
+                android:hint="Enter Your FullName"
+                android:text="@={myRegisterViewModel.fullName}"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:hint="Enter Your Email"
+                android:text="@={myRegisterViewModel.email}"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppinsregular"/>
+
+            <EditText
+                android:id="@+id/edt_createPassword"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:hint="Create Your Password"
+                android:inputType="textPassword"
+                android:text="@={myRegisterViewModel.password}"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppinsregular"/>
+
+<!--            <EditText-->
+<!--                android:id="@+id/edt_confirmPassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="57dp"-->
+<!--                android:paddingLeft="16dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:hint="Confirm Your Password"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:background="@drawable/button_shape"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:fontFamily="@font/poppinsregular"/>-->
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_below="@id/linear_form_register"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{()->myRegisterViewModel.submitButton()}"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinsbold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/btn_register"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:fontFamily="@font/poppinssemibold"
+                android:textSize="12sp"
+                android:textColor="@color/secondary_color"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+</layout>

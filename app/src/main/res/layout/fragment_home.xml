@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.loginappmvvm.ui.home.HomeFragment">
+
+    <data>
+        <variable
+            name="myHomeFragment"
+            type="com.example.loginappmvvm.ui.home.HomeFragment" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/img_shape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/shape"
+            android:layout_marginTop="-30dp"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/img_logo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="125dp"
+            android:src="@drawable/logo1"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_shape"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Get things done with TODo"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_1"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the , "
+            android:padding="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/poppinsregular"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_2"
+            android:layout_centerHorizontal="true"
+            android:width="300dp"
+            android:text="Login"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsbold"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:width="300dp"
+            android:text="Register"
+            android:background="@drawable/button_shape"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppinsbold"/>
+
+    </RelativeLayout>
+
+
+
+
+</layout>
+
